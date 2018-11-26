@@ -3,6 +3,11 @@ package edu.insightr.gildedrose;
 
 public class Conjured_Mana_Cake extends Item{
 
+    public Conjured_Mana_Cake()
+    {
+        this.name = "Conjured Mana Cake";
+    }
+
     public Conjured_Mana_Cake(String name, int sellIn, int quality)
     {
         super();

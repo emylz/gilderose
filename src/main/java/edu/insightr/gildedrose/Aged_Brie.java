@@ -2,6 +2,11 @@ package edu.insightr.gildedrose;
 
 public class Aged_Brie extends Item {
 
+    public  Aged_Brie()
+    {
+        this.name = "Aged Brie";
+    }
+
     public Aged_Brie(String name, int sellIn, int quality)
     {
         super();

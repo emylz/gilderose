@@ -2,6 +2,11 @@ package edu.insightr.gildedrose;
 
 public class Sulfuras_Hand_of_Ragnaros extends Item{
 
+    public Sulfuras_Hand_of_Ragnaros()
+    {
+        this.name = "Sulfuras, Hand of Ragnaros";
+    }
+
     public Sulfuras_Hand_of_Ragnaros(String name, int sellIn, int quality)
     {
         super();
