@@ -101,15 +101,31 @@ public class Inventory {
 
 
     public static void main(String[] args) {
-       Inventory inventory = new Inventory();
-        for (int i = 0; i < 10; i++) {
-            inventory.updateQuality();
-            inventory.printInventory();
-        }
+        DebugVisitor v = new DebugVisitor();
 
-        /*DebugVisitor v = new DebugVisitor();
         Conjured_Mana_Cake c = new Conjured_Mana_Cake("conjured", 14, 15);
         v.visit(c);
-        c.accept(v);*/
+        c.accept(v);
+
+        Aged_Brie a = new Aged_Brie();
+        v.visit(a);
+        a.accept(v);
+
+        Backstage_passes_to_a_TAFKAL80ETC_concert b = new Backstage_passes_to_a_TAFKAL80ETC_concert();
+        v.visit(c);
+        b.accept(v);
+
+        Dexterity_Vest d = new Dexterity_Vest("Vest", 12, 14);
+        v.visit(d);
+        d.accept(v);
+
+        Elixir_of_the_Mongoose e = new Elixir_of_the_Mongoose("ELixir", 17, 2);
+        v.visit(e);
+        e.accept(v);
+
+        Sulfuras_Hand_of_Ragnaros s = new Sulfuras_Hand_of_Ragnaros();
+        v.visit(s);
+        s.accept(v);
+
     }
 }
