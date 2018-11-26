@@ -1,11 +1,16 @@
 package edu.insightr.gildedrose;
 
-public class Item {
+public abstract class Item {
 
-    private String name;
-    private int sellIn;
+    protected String name;
+    protected int sellIn;
 
-    private int quality;
+    protected int quality;
+
+    public Item()
+    {
+        super();
+    }
 
     public Item(String name, int sellIn, int quality) {
         super();
