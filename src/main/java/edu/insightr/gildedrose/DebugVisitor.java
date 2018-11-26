@@ -1,6 +1,6 @@
 package edu.insightr.gildedrose;
 
-public class UpdateVisitor implements IVisitor{
+public class DebugVisitor implements IVisitor{
 
     public void visit(IVisitable o)
     {
