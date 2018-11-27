@@ -2,6 +2,6 @@ package edu.insightr.gildedrose;
 
 public interface IStrategy {
 
-    void solve();
+    void update(Item i);
 
 }
