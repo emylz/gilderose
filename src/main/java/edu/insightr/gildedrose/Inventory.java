@@ -17,16 +17,29 @@ public class Inventory {
 
     public Inventory() {
         super();
-        /*items = new Item[]{
-                new Item("+5 Dexterity Vest", 10, 20),
-                new Item("Aged Brie", 2, 0),
-                new Item("Elixir of the Mongoose", 5, 7),
-                new Item("Sulfuras, Hand of Ragnaros", 0, 80),
-                new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-                new Item("Conjured Mana Cake", 3, 6)
-        };*/
+        items = new Item[]{
+                new Aged_Brie(),
+                new Backstage_passes_to_a_TAFKAL80ETC_concert(),
+                new Conjured_Mana_Cake(),
+                new Dexterity_Vest(),
+                new Elixir_of_the_Mongoose(),
+                new Sulfuras_Hand_of_Ragnaros()
+        };
 
     }
+
+    public void updateInventory()
+    {
+
+        DebugVisitor v = new DebugVisitor();
+
+        for (Item i : items) {
+            i.accept(v);
+
+        }
+
+    }
+
 
     public void printInventory() {
         System.out.println("***************");
@@ -101,31 +114,7 @@ public class Inventory {
 
 
     public static void main(String[] args) {
-        DebugVisitor v = new DebugVisitor();
 
-        Conjured_Mana_Cake c = new Conjured_Mana_Cake("conjured", 14, 15);
-        v.visit(c);
-        c.accept(v);
-
-        Aged_Brie a = new Aged_Brie();
-        v.visit(a);
-        a.accept(v);
-
-        Backstage_passes_to_a_TAFKAL80ETC_concert b = new Backstage_passes_to_a_TAFKAL80ETC_concert();
-        v.visit(c);
-        b.accept(v);
-
-        Dexterity_Vest d = new Dexterity_Vest("Vest", 12, 14);
-        v.visit(d);
-        d.accept(v);
-
-        Elixir_of_the_Mongoose e = new Elixir_of_the_Mongoose("ELixir", 17, 2);
-        v.visit(e);
-        e.accept(v);
-
-        Sulfuras_Hand_of_Ragnaros s = new Sulfuras_Hand_of_Ragnaros();
-        v.visit(s);
-        s.accept(v);
 
     }
 }
